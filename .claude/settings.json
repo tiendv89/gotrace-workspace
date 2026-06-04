@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'f=\"${PWD}/.claude/skills/rag-enforce/rag-prefetch\"; [ -x \"$f\" ] || f=~/.claude/skills/rag-enforce/rag-prefetch; [ -x \"$f\" ] && exec \"$f\" || exit 0'"
+          },
+          {
+            "type": "command",
+            "command": "bash -c 'f=\"${PWD}/.claude/skills/rag-enforce/gitnexus-prefetch\"; [ -x \"$f\" ] || f=~/.claude/skills/rag-enforce/gitnexus-prefetch; [ -x \"$f\" ] && exec \"$f\" || exit 0'"
+          }
+        ]
+      }
+    ]
+  }
+}

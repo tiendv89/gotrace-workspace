@@ -1,0 +1,22 @@
+# Secrets & local environment
+.env
+.env.*
+!.env.template
+
+# Local Claude settings (per-user)
+.claude/settings.local.json
+
+# Sensitive reference material — kept local only (NDA / draft gov docs)
+references/
+
+# OS / editor cruft
+.DS_Store
+*.swp
+Thumbs.db
+
+# Dependencies / build
+node_modules/
+__pycache__/
+*.pyc
+dist/
+build/
